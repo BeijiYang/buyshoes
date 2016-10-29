@@ -40,6 +40,7 @@ h1 {
 h2 {
   font-size: 48px;
   font-weight: 100;
+  width: 0;
 }
 
 h3 {
@@ -61,3 +62,83 @@ a {
   text-decoration: none;
 }
 */
+.site {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+.site__main {
+  /*background-color: pink;*/
+  flex-grow: 7;
+  flex-direction: row;
+  padding-left: 20%;
+}
+.site__right-sidebar{
+  flex-grow: 3;
+  flex-direction: column;
+  /*margin-top: 5%;*/
+}
+.cart__content{
+  margin-top: 20%;
+}
+.cart__title{
+  position: fixed;
+  margin-top: 5px;
+  /* padding-top: 10px;*/
+}
+.site__left-sidebar {
+  flex-basis: auto;
+  /*flex-basis: 0;*/
+  flex-grow: 0;
+  /*flex-shrink:1;*/
+  /*background-color: lightseagreen;*/
+  position: fixed; /*移出布局流*/
+  /*position: absolute;*/ /*不移出布局流*/
+  margin-left: -20%;
+  width: 20%;
+  padding: 2%;
+}
+.site__content {
+  flex-basis: 0;
+  flex-grow: 1;
+
+  background-color: pink;
+}
+.cart {
+   flex-basis: 0;
+  flex-grow: 1;
+    /*background-color: pink;*/
+}
+.checkout {
+    background-color: lightseagreen;
+    flex-basis: auto;
+  flex-grow: 0;
+}
+.products {
+   flex-direction: row;
+  flex-wrap: wrap;
+
+}
+.product {
+  margin-bottom: 2px;
+  width: 50%;
+  height: 250px;
+  background-color: lightgreen;
+}
+
+.cart__content {
+  overflow-y: scroll;
+  height: 100%;
+}
+.cart-item {
+  height: 150px;
+  margin-bottom: 20px;
+  background: rgba(0,255,0,0.3);
+}
+
+.checkout {
+  height: 300px;
+  background: rgba(0,0,255,0.3);
+  margin-top: 20px;
+
+}
